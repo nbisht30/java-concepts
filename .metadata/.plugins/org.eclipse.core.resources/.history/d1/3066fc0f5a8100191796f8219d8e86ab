@@ -1,0 +1,8 @@
+package com.chegg;
+
+import java.util.ArrayList;
+
+public class Zoo {
+	String zooName;
+	ArrayList<Animal> animals;
+}

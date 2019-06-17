@@ -1,0 +1,22 @@
+package com.chegg;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.Test;
+
+public class Test_Zoo {
+	@Test
+	public void TestDefaultConstructor() {
+		Zoo newZoo = new Zoo();
+		assertEquals(null, newZoo.getZooName());
+		assertEquals(null, newZoo.getAnimals());
+	}
+
+	@Test
+	public void TestParameterizedConstructor() {
+		Animal snailWeightUndefined = new Animal("Snail", -10);
+		assertEquals("Snail", snailWeightUndefined.getType());
+		assertEquals(0, snailWeightUndefined.getWeight());
+	}
+
+}

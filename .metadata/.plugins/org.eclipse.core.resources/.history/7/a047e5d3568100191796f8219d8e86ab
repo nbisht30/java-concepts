@@ -1,0 +1,13 @@
+package com.chegg;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.Test;
+
+public class Test_Animal {
+	@Test
+	public void TestDefaultConstructor() {
+		Animal snailWeightUnknown = new Animal();
+		assertEquals(0, snailWeightUnknown.getWeight());
+	}
+}

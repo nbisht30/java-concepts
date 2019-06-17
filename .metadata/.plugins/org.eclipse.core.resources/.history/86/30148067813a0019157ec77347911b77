@@ -1,0 +1,7 @@
+
+public class TestExample {
+@Test
+public void test() {
+	System.out.println("testing");
+}
+}

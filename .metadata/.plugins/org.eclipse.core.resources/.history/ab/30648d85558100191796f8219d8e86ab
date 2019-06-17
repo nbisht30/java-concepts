@@ -1,0 +1,18 @@
+package com.chegg;
+
+public class Animal {
+	double weight;
+
+	public Animal(double weight) {
+		this.weight = weight;
+	}
+
+	public Animal(double weight) {
+		this.weight = weight;
+	}
+
+	public void setWeight(double weight) {
+		this.weight = weight;
+	}
+
+}

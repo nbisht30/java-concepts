@@ -1,0 +1,23 @@
+package com.InterviewQuestions;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+public class CollectionsInterviewQuestion {
+	public static void main(String[] args) {
+		String data;
+		ArrayList<String> ipAddresses = new ArrayList<>();
+
+		try (BufferedReader in = new BufferedReader(
+				new InputStreamReader(new FileInputStream("ipaddresses.txt"), "UTF-8"))) {
+			while ((ipAddresses.add(in.readLine()) != null) && !data.equals("start")) {
+				System.out.print("\nDid not enter \"start\". Try again: ");
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+}

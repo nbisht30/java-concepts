@@ -1,0 +1,8 @@
+package com.chegg;
+
+public class Test_Animal {
+	@Test
+	public void TestDefaultConstructor() {
+		Animal snailWeightUnknown = new Animal();
+	}
+}
