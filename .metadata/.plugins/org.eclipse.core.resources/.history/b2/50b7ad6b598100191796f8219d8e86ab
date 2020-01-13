@@ -1,6 +1,0 @@
-package com.chegg;
-
-public class Zoo {
-	String zooName;
-	ArrayList<Animal> animals;
-}
