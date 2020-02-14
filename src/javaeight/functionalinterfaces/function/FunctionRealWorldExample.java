@@ -2,6 +2,8 @@ package javaeight.functionalinterfaces.function;
 
 import javaeight.functionalinterfaces.consumer.realworldexample.Student;
 import javaeight.functionalinterfaces.consumer.realworldexample.StudentDataBase;
+import javaeight.functionalinterfaces.predicate.PredicateExample;
+import javaeight.functionalinterfaces.predicate.PredicateRealWorldExample;
 
 import java.util.HashMap;
 import java.util.List;
@@ -18,6 +20,7 @@ public class FunctionRealWorldExample {
             students -> {
                 Map<String, Double> studentGradeMap = new HashMap<>();
                 students.forEach(student -> {
+                    if(PredicateRealWorldExample.predicateGpa.test(student))  //only for above 3.9 gpa
                     studentGradeMap.put(student.getName(), student.getGpa());
                 });
                 return studentGradeMap;
