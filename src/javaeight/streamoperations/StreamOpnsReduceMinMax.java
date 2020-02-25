@@ -21,6 +21,5 @@ public class StreamOpnsReduceMinMax {
         List<Integer> integerList = Arrays.asList(6,7,8,9,10);
         System.out.println("Max : "+ findMax(integerList).get());
         System.out.println("Min : "+ findMin(integerList).get());
-
     }
 }
