@@ -3,19 +3,21 @@ package javaeight.streamoperations;
 import javaeight.functionalinterfaces.consumer.realworldexample.Student;
 import javaeight.functionalinterfaces.consumer.realworldexample.StudentDataBase;
 
-import java.util.Optional;
-
 /**
  * @author Nikhil Bisht
  * @date 25-02-2020
  */
-public class StreamOperationsReduceRealWorldExample {
-    public static Optional<Student> highestGpaStudent() {
-        return StudentDataBase.getAllStudents().stream().reduce((student, student2) ->
-                (student.getGpa() > student2.getGpa()) ? student : student2);
+public class StreamOperationsMapReduceExample {
+    public static Integer totalNotebooks() {
+        return StudentDataBase.getAllStudents().stream().
+                filter(student -> student.getGradeLevel() >= 3).
+                map(Student::getNotebooks).
+//                reduce(0, (r, r2) -> r + r2);  //Or use the one below
+        reduce(0, Integer::sum);
     }
 
     public static void main(String[] args) {
-        System.out.println(highestGpaStudent().get());
+        // Use Case: Get total number of notebooks all students have
+        System.out.println(totalNotebooks());
     }
 }
